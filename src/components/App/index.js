@@ -1,14 +1,15 @@
 // == Import
+import { Route, Routes } from 'react-router-dom';
 import Avatar from '../Avatar';
-import AvatarEditor from '../AvatarEditor';
 import './styles.css';
 
 // == Composant
 function App() {
   return (
     <div className="app">
-      <Avatar />
-      <AvatarEditor />
+      <Routes>
+        <Route path="/" element={<Avatar />} />
+      </Routes>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import './style.scss';
 import { useSelector } from 'react-redux';
+import AvatarEditor from '../AvatarEditor';
 
 function Avatar() {
   const avatar = useSelector((state) => state.avatar.shape);
@@ -27,6 +28,7 @@ function Avatar() {
       <div className="facialHair-img">
         <img src={avatar.facialHair.url} alt="body" />
       </div>
+      <AvatarEditor />
     </div>
 
   );

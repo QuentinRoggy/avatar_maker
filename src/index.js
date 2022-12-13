@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from 'src/components/App';
 import { store } from './store';
@@ -8,7 +9,9 @@ import { store } from './store';
 
 const rootReactElement = (
   <Provider store={store}>
-    <App />;
+    <BrowserRouter>
+      <App />;
+    </BrowserRouter>
   </Provider>
 );
 const root = createRoot(document.getElementById('root'));
